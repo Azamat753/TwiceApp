@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/ribbonFragment">
+
+    <fragment
+        android:id="@+id/ribbonFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.ribbon.RibbonFragment"
+        android:label="@string/ribbon"
+        tools:layout="@layout/fragment_ribbon" />
+    <fragment
+        android:id="@+id/participantsFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.participants.ParticipantsFragment"
+        android:label="@string/participants"
+        tools:layout="@layout/fragment_participants" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.details.DetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/factsFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.facts.FactsFragment"
+        android:label="@string/facts"
+        tools:layout="@layout/fragment_facts" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.photo.PhotoFragment"
+        android:label="@string/photo"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.albums.AlbumsFragment"
+        android:label="@string/albums"
+        tools:layout="@layout/fragment_albums" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.checkout.CheckoutFragment"
+        android:label="@string/checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.buy.BuyFragment"
+        android:label="@string/checkout"
+        tools:layout="@layout/fragment_buy" />
+    <fragment
+        android:id="@+id/toursFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.tours.ToursFragment"
+        android:label="@string/tours"
+        tools:layout="@layout/fragment_tours" />
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.group.GroupFragment"
+        android:label="@string/about_group"
+        tools:layout="@layout/fragment_group" />
+</navigation>

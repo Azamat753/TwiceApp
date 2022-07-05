@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TwiceApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ribbon">Лента</string>
+    <string name="participants">Участницы</string>
+    <string name="details">Подробности</string>
+    <string name="facts">Факты</string>
+    <string name="photo">Фотографии</string>
+    <string name="albums">Альбомы</string>
+    <string name="checkout">Оформление заказа</string>
+    <string name="tours">Туры</string>
+    <string name="about_group">О группе</string>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ribbonFragment"
+        android:icon="@drawable/ribbon_selector"
+        android:title="@string/ribbon" />
+    <item
+        android:id="@+id/participantsFragment"
+        android:icon="@drawable/participants_selector"
+        android:title="@string/participants" />
+    <item
+        android:id="@+id/albumsFragment"
+        android:icon="@drawable/albums_selector"
+        android:title="@string/albums" />
+    <item
+        android:id="@+id/toursFragment"
+        android:icon="@drawable/tours_selector"
+        android:title="@string/tours" />
+    <item
+        android:id="@+id/groupFragment"
+        android:icon="@drawable/group_selector"
+        android:title="@string/about_group" />
+</menu>
