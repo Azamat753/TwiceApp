@@ -3,6 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/albums_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/group_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_albums.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_albums_light.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_group.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_group_light.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_participants.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_participants_light.xml" value="0.2325" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_ribbon.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_ribbon_light.xml" value="0.2325" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_tours.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ic_tours_light.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/participants_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/ribbon_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/splashscreen.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/tours_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/drawable/txt_selector.xml" value="0.236" />
+        <entry key="..\:/TwiceApp/app/src/main/res/layout/fragment_albums.xml" value="0.3605072463768116" />
+        <entry key="..\:/TwiceApp/app/src/main/res/layout/fragment_ribbon.xml" value="0.35280797101449274" />
+        <entry key="..\:/TwiceApp/app/src/main/res/layout/item_albums.xml" value="0.3605072463768116" />
+        <entry key="..\:/TwiceApp/app/src/main/res/layout/item_rv.xml" value="0.35280797101449274" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/drawable/albums_selector.xml" value="0.1" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/drawable/group_selector.xml" value="0.1" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/drawable/participants_selector.xml" value="0.1" />

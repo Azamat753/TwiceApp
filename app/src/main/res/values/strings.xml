@@ -10,4 +10,6 @@
     <string name="checkout">Оформление заказа</string>
     <string name="tours">Туры</string>
     <string name="about_group">О группе</string>
+    <string name="likey">Likey</string>
+    <string name="buy">Купить</string>
 </resources>
