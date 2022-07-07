@@ -6,10 +6,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
+        android:id="@+id/img_tours"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
         android:layout_marginHorizontal="@dimen/twelve"
-        android:id="@+id/img_tours"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/imgtours" />
@@ -28,8 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/concert"
-        android:textSize="@dimen/sixteen"
+        android:textSize="@dimen/twenty"
         android:textStyle="bold"
+        android:fontFamily="@font/finland"
         app:layout_constraintBottom_toBottomOf="@id/img_tours"
         app:layout_constraintStart_toStartOf="parent"
         android:paddingStart="@dimen/twelve"
@@ -41,10 +42,12 @@
         android:layout_height="@dimen/four_ty"
         android:layout_marginHorizontal="@dimen/fifty"
         android:layout_marginVertical="@dimen/twenty"
+        android:fontFamily="@font/finland"
         android:textColor="@color/white"
         android:text="Оформить заказ"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="@dimen/twenty"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/img_tours"
         android:background="@drawable/oval"    />
 
