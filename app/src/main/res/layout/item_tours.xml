@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/twenty"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:layout_marginHorizontal="@dimen/twelve"
+        android:id="@+id/img_tours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imgtours" />
+
+    <ImageView
+        android:id="@+id/img_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@id/img_tours"
+        android:alpha="0.92"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/txt_time_tours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/concert"
+        android:textSize="@dimen/sixteen"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_tours"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/twelve"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/ninety"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/four_ty"
+        android:layout_marginHorizontal="@dimen/fifty"
+        android:layout_marginVertical="@dimen/twenty"
+        android:textColor="@color/white"
+        android:text="Оформить заказ"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/img_tours"
+        android:background="@drawable/oval"    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

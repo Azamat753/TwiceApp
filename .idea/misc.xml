@@ -13,6 +13,16 @@
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/layout/fragment_albums.xml" value="0.1" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/menu/main.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/drawable/ic_tours_light.xml" value="0.194" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/drawable/oval.xml" value="0.194" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/drawable/ribbon_selector.xml" value="0.194" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/drawable/splashscreen.xml" value="0.194" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/drawable/tours_selector.xml" value="0.194" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/layout/fragment_group.xml" value="0.371875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/layout/fragment_participants.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/layout/fragment_photo.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/layout/fragment_tours.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TwiceApp/app/src/main/res/layout/item_tours.xml" value="0.25" />
       </map>
     </option>
   </component>
