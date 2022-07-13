@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/txt_choose"
@@ -20,7 +20,7 @@
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="1. Выбрать способ оплаты"
+        android:text="@string/_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -29,7 +29,7 @@
         android:paddingHorizontal="@dimen/sixteen"
         android:textStyle="bold"
         android:textSize="@dimen/fourteen_sp"
-        android:text="VISA"
+        android:text="@string/visa"
         android:layout_marginTop="@dimen/twenty_four"
         app:layout_constraintTop_toBottomOf="@id/txt_choose"
         app:layout_constraintStart_toStartOf="@id/txt_choose"
@@ -43,7 +43,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:paddingHorizontal="@dimen/sixteen"
-        android:text="MasterCard"
+        android:text="@string/mastercard"
         app:layout_constraintTop_toBottomOf="@id/btn_visa"
         app:layout_constraintStart_toStartOf="@id/btn_visa"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:paddingHorizontal="@dimen/sixteen"
-        android:text="Наличными"
+        android:text="@string/nal"
         android:layout_marginTop="@dimen/twenty"
         app:layout_constraintTop_toBottomOf="@id/btn_mastercard"
         app:layout_constraintStart_toStartOf="@id/btn_mastercard"
@@ -68,7 +68,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="@dimen/fourteen_sp"
-        android:text="Элсом"
+        android:text="@string/elsom"
         android:layout_marginStart="@dimen/one_hundred_forty"
         android:layout_marginTop="@dimen/twenty_eight"
         app:layout_constraintTop_toBottomOf="@id/txt_choose"
@@ -85,7 +85,7 @@
         android:layout_marginTop="@dimen/sixteen_sp"
         app:layout_constraintStart_toStartOf="@id/btn_elsom"
         app:layout_constraintTop_toBottomOf="@id/btn_elsom"
-        android:text="ОДеньги"
+        android:text="@string/O"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -97,7 +97,7 @@
         app:layout_constraintStart_toStartOf="@id/txt_choose"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="2. Адрес и телефон"
+        android:text="@string/_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -107,7 +107,7 @@
         android:layout_marginTop="@dimen/twenty"
         app:layout_constraintTop_toBottomOf="@id/txt_address_and_cell"
         app:layout_constraintStart_toStartOf="@id/txt_address_and_cell"
-        android:text="Город или населенный пункт"
+        android:text="@string/town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -118,7 +118,7 @@
         android:paddingStart="@dimen/four"
         android:layout_marginTop="@dimen/sixteen"
         android:background="@drawable/input_types"
-        android:hint="г. Бишкек"
+        android:hint="@string/town_bish"
         app:layout_constraintTop_toBottomOf="@id/town_or_pun"
         app:layout_constraintEnd_toEndOf="@id/town_or_pun"
         app:layout_constraintStart_toStartOf="@id/town_or_pun"
@@ -131,7 +131,7 @@
         android:layout_marginTop="@dimen/twenty_four"
         app:layout_constraintTop_toBottomOf="@id/ed_town"
         app:layout_constraintStart_toStartOf="@id/town_or_pun"
-        android:text="Улица, номер дома и квартиры"
+        android:text="@string/street"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -145,7 +145,7 @@
         app:layout_constraintEnd_toEndOf="@id/ed_town"
         app:layout_constraintTop_toBottomOf="@id/txt_street_number_house_apartment"
         app:layout_constraintStart_toStartOf="@id/txt_street_number_house_apartment"
-        android:hint="ул. Ибраимова 96, кв. 67"
+        android:hint="@string/_96_67"
         android:layout_width="@dimen/zero"
         android:layout_height="@dimen/forty"/>
 
@@ -156,7 +156,7 @@
             android:layout_marginTop="@dimen/twenty_four"
             app:layout_constraintTop_toBottomOf="@id/ed_street"
             app:layout_constraintStart_toStartOf="@id/txt_choose"
-            android:text="Номер телефона"
+            android:text="@string/number_cell"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -164,7 +164,7 @@
             android:textSize="@dimen/fourteen_sp"
             android:id="@+id/ed_number"
             android:paddingStart="@dimen/four"
-            android:hint="+996 777 666 555"
+            android:hint="@string/_996_777_666_555"
             android:background="@drawable/input_types"
             android:layout_marginTop="@dimen/sixteen"
             app:layout_constraintTop_toBottomOf="@id/txt_number_of_cell"
@@ -181,7 +181,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/sixteen_sp"
             android:textStyle="bold"
-            android:text=" 3. VISA"
+            android:text="@string/_3_visa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -192,7 +192,7 @@
             app:layout_constraintStart_toStartOf="@id/txt_visa"
             android:textStyle="bold"
             android:textSize="@dimen/fourteen_sp"
-            android:text="Номер карты"
+            android:text="@string/number_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -206,7 +206,7 @@
             app:layout_constraintEnd_toEndOf="@id/ed_town"
             app:layout_constraintTop_toBottomOf="@id/txt_number_card"
             app:layout_constraintStart_toStartOf="@id/txt_number_card"
-            android:hint="4169   7777   6666   5555 "
+            android:hint="@string/_4169_7777_6666_5555"
             android:layout_width="@dimen/zero"
             android:layout_height="@dimen/forty"/>
 
@@ -217,7 +217,7 @@
             app:layout_constraintStart_toStartOf="@id/txt_choose"
             android:textSize="@dimen/fourteen_sp"
             android:textStyle="bold"
-            android:text="Владелец карты"
+            android:text="@string/card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -229,7 +229,7 @@
             android:layout_marginTop="@dimen/sixteen"
             app:layout_constraintTop_toBottomOf="@id/txt_owner_card"
             app:layout_constraintStart_toStartOf="@id/txt_owner_card"
-            android:hint="IVANOV IVAN"
+            android:hint="@string/ivanov_ivan"
             android:paddingHorizontal="@dimen/four"
             android:background="@drawable/input_types"
             android:layout_width="@dimen/zero"
@@ -242,7 +242,7 @@
             android:layout_marginTop="@dimen/twenty_eight"
             app:layout_constraintTop_toBottomOf="@id/ed_owner_of_card"
             app:layout_constraintStart_toStartOf="@id/txt_choose"
-            android:text="Valid thru"
+            android:text="@string/valid_thru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -256,7 +256,7 @@
             app:layout_constraintStart_toStartOf="@id/ed_town"
             android:background="@drawable/input_types"
             android:paddingStart="@dimen/four"
-            android:hint="11/23"
+            android:hint="@string/_11_23"
             android:layout_width="@dimen/zero"
             android:layout_height="@dimen/forty"/>
 
@@ -267,7 +267,7 @@
             app:layout_constraintStart_toStartOf="@id/txt_choose"
             android:textSize="@dimen/fourteen_sp"
             android:textStyle="bold"
-            android:text="CVC"
+            android:text="@string/cvc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -280,7 +280,7 @@
             app:layout_constraintEnd_toEndOf="@id/ed_town"
             app:layout_constraintStart_toStartOf="@id/ed_town"
             android:textSize="@dimen/fourteen_sp"
-            android:hint="154"
+            android:hint="@string/_154"
             android:layout_width="@dimen/zero"
             android:layout_height="@dimen/forty"/>
 

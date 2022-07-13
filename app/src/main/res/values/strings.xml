@@ -20,4 +20,26 @@
     <string name="real_name">Реальное имя</string>
     <string name="other_names">Другие имена</string>
     <string name="other_participants">Другие участницы</string>
+    <string name="_154">154</string>
+    <string name="cvc">CVC</string>
+    <string name="_11_23">11/23</string>
+    <string name="valid_thru">Valid thru</string>
+    <string name="ivanov_ivan">IVANOV IVAN</string>
+    <string name="card">Владелец карты</string>
+    <string name="_4169_7777_6666_5555">4169 7777 6666 5555</string>
+    <string name="number_card">Номер карты</string>
+    <string name="_3_visa">3. VISA</string>
+    <string name="_996_777_666_555">+996 777 666 555</string>
+    <string name="number_cell">Номер телефона</string>
+    <string name="_96_67">ул. Ибраимова 96, кв. 67</string>
+    <string name="street">Улица, номер дома и квартиры</string>
+    <string name="town_bish">г. Бишкек</string>
+    <string name="town">Город или населенный пункт</string>
+    <string name="_2">2. Адрес и телефон</string>
+    <string name="O">ОДеньги</string>
+    <string name="elsom">Элсом</string>
+    <string name="nal">Наличными</string>
+    <string name="mastercard">MasterCard</string>
+    <string name="visa">VISA</string>
+    <string name="_1">1. Выбрать способ оплаты</string>
 </resources>
