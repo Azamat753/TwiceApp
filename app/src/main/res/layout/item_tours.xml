@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/twenty">
+
+    <ImageView
+        android:id="@+id/img_tours"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/two_zero_zero"
+        android:layout_marginHorizontal="@dimen/twelve"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/img_rectangle"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/thirty_two"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@id/img_tours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_time_tours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/finland"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_tours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/forty_six"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/fifty_four"
+        android:layout_marginVertical="@dimen/twenty"
+        android:background="@drawable/bg_tours"
+        android:fontFamily="@font/finland"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_tours"
+        tools:text="Оформить заказ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
