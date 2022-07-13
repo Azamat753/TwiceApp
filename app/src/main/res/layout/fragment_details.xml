@@ -1,14 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.details.DetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txt_name"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_marginTop="@dimen/twelve"
+        android:layout_marginStart="@dimen/sixteen"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/img_main_pic"
+        android:layout_marginTop="@dimen/sixteen"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        android:src="@drawable/participants"
+        android:layout_width="160dp"
+        android:layout_height="220dp"/>
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic1"
+        app:layout_constraintEnd_toStartOf="@id/img_second_pic"
+        android:id="@+id/img_first_pic"
+        app:layout_constraintStart_toEndOf="@id/img_main_pic"
+        app:layout_constraintTop_toTopOf="@id/img_main_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/img_second_pic"
+        app:layout_constraintTop_toTopOf="@id/img_main_pic"
+        app:layout_constraintStart_toEndOf="@id/img_first_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_photos"
+        android:textAllCaps="false"
+        android:text="@string/photos"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="@id/img_second_pic"
+        app:layout_constraintBottom_toBottomOf="@id/img_main_pic"
+        app:layout_constraintStart_toStartOf="@id/img_first_pic"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="@dimen/sixteen"
+        app:layout_constraintBottom_toTopOf="@id/btn_photos"
+        android:backgroundTint="@color/orange"
+        android:textAllCaps="false"
+        android:text="@string/fact"
+        app:layout_constraintStart_toStartOf="@id/btn_photos"
+        app:layout_constraintEnd_toEndOf="@id/btn_photos"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_main_pic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero">
+
+        <LinearLayout
+            android:id="@+id/ln_scroll"
+            android:paddingStart="@dimen/twelve"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero">
+
+            <TextView
+                android:layout_marginTop="@dimen/twenty"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                android:text="@string/real_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/sixteen_sp"
+                android:text="@string/other_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="Дата рождения"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="Место рождения"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="Образование"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="Карьера"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="Характеристика"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginVertical="@dimen/four"
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textSize="@dimen/sixteen_sp"
+                tools:text="name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_other_participants"
+                android:layout_marginTop="@dimen/forty"
+                android:textSize="@dimen/sixteen_sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/other_participants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/twenty"
+                tools:listitem="@layout/item_participants"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

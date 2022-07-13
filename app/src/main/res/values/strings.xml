@@ -12,4 +12,12 @@
     <string name="about_group">О группе</string>
     <string name="likey">Likey</string>
     <string name="buy">Купить</string>
+    <string name="price">Цена</string>
+    <string name="zero">0</string>
+    <string name="more">Подробнее</string>
+    <string name="photos">Фотографии</string>
+    <string name="fact">Факты</string>
+    <string name="real_name">Реальное имя</string>
+    <string name="other_names">Другие имена</string>
+    <string name="other_participants">Другие участницы</string>
 </resources>

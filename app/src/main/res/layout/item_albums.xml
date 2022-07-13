@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_marginTop="@dimen/twelve"
-    android:layout_marginHorizontal="@dimen/fourty"
+    android:layout_marginHorizontal="@dimen/forty"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="240dp"
@@ -38,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#E2643C"
+        android:backgroundTint="@color/orange"
         android:gravity="center"
         android:text="@string/buy"
         android:textSize="@dimen/twelve_sp"

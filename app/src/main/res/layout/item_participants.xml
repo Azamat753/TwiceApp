@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/img_part"
+        android:src="@drawable/participants"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="115dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#33000000"
+        app:layout_constraintBottom_toBottomOf="@id/img_part"
+        app:layout_constraintEnd_toEndOf="@id/img_part"
+        app:layout_constraintStart_toStartOf="@id/img_part"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginStart="@dimen/four"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/txt_job"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fourteen_sp"
+            android:textStyle="bold"
+            tools:text="job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            app:layout_constraintStart_toStartOf="@id/txt_job"
+            app:layout_constraintBottom_toTopOf="@id/txt_job"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixteen_sp"
+            android:textColor="@color/white"
+            android:text="name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="@dimen/eight"
+        app:cornerRadius="@dimen/eight"
+        android:backgroundTint="@color/orange"
+        android:textSize="@dimen/ten_sp"
+        android:text="@string/more"
+        app:layout_constraintEnd_toEndOf="@id/img_part"
+        app:layout_constraintTop_toBottomOf="@id/img_part"
+        app:layout_constraintStart_toStartOf="@id/img_part"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/forty"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
