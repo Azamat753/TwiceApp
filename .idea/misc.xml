@@ -14,8 +14,23 @@
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/layout/fragment_albums.xml" value="0.1" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceApp/app/src/main/res/menu/main.xml" value="0.25" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/drawable-v24/bg_tours.xml" value="0.1" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/drawable/bg_types.xml" value="0.1" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/drawable/ic_baseline_horizontal_rule_24.xml" value="0.1" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_albums.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_buy.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_checkout.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_details.xml" value="0.152" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_facts.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_group.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_participants.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_photo.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_ribbon.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/fragment_tours.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/item_albums.xml" value="0.536" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/item_buy.xml" value="0.152" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/item_participants.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/item_rb.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nitro/StudioProjects/TwiceAppLadno/app/src/main/res/layout/item_tours.xml" value="0.22826086956521738" />
       </map>
     </option>

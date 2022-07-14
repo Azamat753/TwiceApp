@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/sixteen">
+
+    <ImageView
+        android:id="@+id/item_album_img"
+        android:layout_width="@dimen/one_hundred_twenty"
+        android:layout_height="@dimen/one_hundred_twenty"
+        android:layout_marginStart="@dimen/twelve"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_album_name"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_four_sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/item_album_img"
+        app:layout_constraintStart_toStartOf="@id/item_album_img"
+        app:layout_constraintTop_toBottomOf="@id/item_album_img"
+        tools:text="@string/likey" />
+
+    <TextView
+        android:id="@+id/item_txt_price_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/thirty_two"
+        android:text="@string/price"
+        app:layout_constraintStart_toEndOf="@id/item_album_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/four"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/item_txt_price_name"
+        app:layout_constraintTop_toBottomOf="@id/item_txt_price_name"
+        tools:text="3500 com" />
+
+    <ImageView
+        android:id="@+id/img_plus"
+        android:layout_width="@dimen/forty_eight"
+        android:layout_height="@dimen/thirty_two"
+        android:layout_marginStart="@dimen/thirty_two"
+        android:background="@color/orange"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/item_album_name"
+        app:layout_constraintStart_toEndOf="@id/item_album_name" />
+
+    <ImageView
+        android:id="@+id/img_minus"
+        android:layout_width="@dimen/forty_eight"
+        android:layout_height="@dimen/thirty_two"
+        android:layout_marginEnd="@dimen/seventy_two"
+        android:background="@color/orange"
+        android:src="@drawable/ic_baseline_horizontal_rule_24"
+        app:layout_constraintBottom_toBottomOf="@id/item_album_name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_minus"
+        app:layout_constraintEnd_toStartOf="@id/img_minus"
+        app:layout_constraintStart_toEndOf="@id/img_plus"
+        app:layout_constraintTop_toTopOf="@id/img_minus"
+        tools:text="@string/zero" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two"
+        android:layout_marginTop="@dimen/sixteen"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/img_minus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
