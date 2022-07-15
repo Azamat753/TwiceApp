@@ -36,7 +36,7 @@ abstract class BaseViewModel : ViewModel() {
     }
 
     /**
-     *arguments listener for result from other fragments
+     arguments listener for result from other fragments
      */
     open fun onResult(result: Any) {
 

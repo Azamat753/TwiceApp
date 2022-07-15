@@ -42,9 +42,4 @@
     <string name="mastercard">MasterCard</string>
     <string name="visa">VISA</string>
     <string name="_1">1. Выбрать способ оплаты</string>
-    <string name="date">Дата рождения</string>
-    <string name="place">Место рождения</string>
-    <string name="school">Образование</string>
-    <string name="carear">Карьера</string>
-    <string name="Characteristic">Характеристика</string>
 </resources>

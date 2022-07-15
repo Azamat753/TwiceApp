@@ -1,40 +1,71 @@
 package com.siroca.twiceapp.ui.fragment.participants
 
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseFragment
-import com.siroca.twiceapp.R
+import com.example.domain.participants.entity.ParticipantEntity
 import com.siroca.twiceapp.databinding.FragmentParticipantsBinding
 import com.siroca.twiceapp.ui.fragment.participants.adapter.ParticipantsAdapter
-import com.siroca.twiceapp.ui.fragment.participants.model.ParticipantsModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class ParticipantsFragment : BaseFragment<FragmentParticipantsBinding>(FragmentParticipantsBinding::inflate),
-    ParticipantsAdapter.Listener {
+@AndroidEntryPoint
+class ParticipantsFragment :
+    BaseFragment<FragmentParticipantsBinding>(FragmentParticipantsBinding::inflate),
+    ParticipantsAdapter.Result {
 
-    private lateinit var adapter: ParticipantsAdapter
-    private val navController: NavController by lazy {
-        val navHostFragment =
-            requireActivity().supportFragmentManager.findFragmentById(R.id.fragment_container)
-                    as NavHostFragment
-        navHostFragment.navController
+    private val adapter: ParticipantsAdapter by lazy {
+        ParticipantsAdapter(this)
     }
+    private val viewModel by viewModels<ParticipantsViewModel>()
 
     override fun setupUI() {
-        init()
+        initAdapter()
+        initData()
     }
 
-    private fun init(){
-        adapter = ParticipantsAdapter(this)
-        val list = ParticipantsModel("Цзуи", "Вижуал", R.drawable.participants)
+    override fun setupObservers() {
+        super.setupObservers()
+        observeParticipants()
+    }
+
+    /**
+    Получения данных из ViewModel
+    p.s
+    схема написанная ниже работает так же только в обратную сторону
+     */
+    private fun observeParticipants() {
+
+    }
+
+    private fun handleParticipants(list: List<ParticipantEntity>) {
+        adapter.list = list
+    }
+
+    /**
+    Запрос через ViewModel , viewModel в свою очередь дергает domain слой ,
+    domain cлой дергает data слой, и только через data слой осуществляется запрос на сервер
+     **/
+    private fun initData() {
+
+    }
+
+    private fun initAdapter() {
         requireBinding().rvParticipants.adapter = adapter
-        adapter.addRibbon(list)
     }
 
-    override fun onClick(pos: Int) {
-        adapter.getModel(pos)
-        navController.navigate(R.id.detailsFragment)
+    /**
+    Переход с фрагмента Участницы на фрагмент Подробности
+     */
+    override fun onClickListener(id: String) {
+        navigateDetails(id)
     }
 
-
+    /**
+    Реализация перехода
+    p.s Добавить анимацию нужно!(Мне лень, поэтому Урмат это твоя задача!)
+     */
+    private fun navigateDetails(id: String) {
+        val action = ParticipantsFragmentDirections.actionParticipantsFragmentToDetailsFragment(id)
+        findNavController().navigate(action)
+    }
 }

@@ -25,5 +25,5 @@
     <dimen name="one_hundred_forty">140dp</dimen>
     <dimen name="sixty_four">64dp</dimen>
     <dimen name="ten_sp">10sp</dimen>
-    <dimen name="eight_sp">8sp</dimen>
+    <dimen name="one_hundred">100dp</dimen>
 </resources>

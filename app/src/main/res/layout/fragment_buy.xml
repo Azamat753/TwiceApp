@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.buy.BuyFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_buy"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
         app:layout_constraintBottom_toTopOf="@id/txt_sum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_buy" />
 
     <TextView
-        android:textSize="@dimen/sixteen_sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:id="@+id/txt_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/twelve"
         android:layout_marginTop="@dimen/twelve"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/btn_buy"
-        android:id="@+id/txt_sum"
-        tools:text="Всего"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rv_buy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:text="@string/all" />
 
     <TextView
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="@dimen/sixteen_sp"
-        tools:text="4500 com"
-        android:layout_marginStart="@dimen/twelve"
-        app:layout_constraintBottom_toBottomOf="@id/txt_sum"
-        app:layout_constraintTop_toTopOf="@id/txt_sum"
-        app:layout_constraintStart_toEndOf="@id/txt_sum"
+        android:id="@+id/txt_sum_count"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twelve"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txt_sum"
+        app:layout_constraintStart_toEndOf="@id/txt_sum"
+        app:layout_constraintTop_toTopOf="@id/txt_sum"
+        tools:text="4500 com" />
 
     <com.google.android.material.button.MaterialButton
-        app:cornerRadius="@dimen/twelve"
-        android:layout_marginVertical="80dp"
         android:id="@+id/btn_buy"
-        android:paddingHorizontal="40dp"
-        android:text="@string/buy"
-        android:backgroundTint="@color/orange"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_sum"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/eighty"
+        android:backgroundTint="@color/orange"
+        android:paddingHorizontal="@dimen/forty"
+        android:text="@string/buy"
+        android:textAllCaps="false"
+        app:cornerRadius="@dimen/twelve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_sum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -133,7 +133,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp"
-                android:text="@string/date"
+                tools:text="Дата рождения"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -148,7 +148,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="@dimen/sixteen_sp"
-                android:text="@string/place"
+                tools:text="Место рождения"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -163,7 +163,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp"
-                android:text="@string/school"
+                tools:text="Образование"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -177,7 +177,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="@dimen/sixteen_sp"
-                android:text="@string/carear"
+                tools:text="Карьера"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -192,7 +192,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp"
-                android:text="@string/Characteristic"
+                tools:text="Характеристика"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView

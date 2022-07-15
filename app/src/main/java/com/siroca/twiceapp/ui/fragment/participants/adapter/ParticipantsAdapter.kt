@@ -1,56 +1,56 @@
 package com.siroca.twiceapp.ui.fragment.participants.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.siroca.twiceapp.R
+import coil.load
 import com.siroca.twiceapp.databinding.ItemParticipantsBinding
-import com.siroca.twiceapp.ui.fragment.participants.model.ParticipantsModel
+import com.example.domain.participants.entity.ParticipantEntity
 
-class ParticipantsAdapter(private val listener:Listener) : RecyclerView.Adapter<ParticipantsAdapter.ViewHolder>() {
+class ParticipantsAdapter(private val listener: Result) :
+    RecyclerView.Adapter<ParticipantsAdapter.ViewHolder>() {
 
-    private val list = ArrayList<ParticipantsModel>()
+    var list = listOf<ParticipantEntity>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
-    fun getModel(pos: Int): ParticipantsModel{
-        return list[pos]
-    }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val binding = ItemParticipantsBinding.bind(view)
-        fun bind(list: ParticipantsModel) = with(binding){
-            imgPart.setImageResource(list.image)
-            txtName.text = list.name
-            txtJob.text = list.job
+    inner class ViewHolder(private val binding: ItemParticipantsBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun onBind(position: Int) = with(binding) {
+            imgPart.load(list[position].image)
+            txtName.text = list[position].name
+            txtJob.text = list[position].position_group
+        }
+
+        fun onClick(position: Int) {
+            itemView.setOnClickListener {
+                listener.onClickListener(list[position].id)
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_participants,
-            parent, false)
-        return ViewHolder(view)
+        return ViewHolder(
+            ItemParticipantsBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
-        holder.binding.btnDetails.setOnClickListener {
-            listener.onClick(position)
-        }
+        holder.onBind(position)
+        holder.onClick(position)
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+    override fun getItemCount(): Int = list.size
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun addRibbon(model: ParticipantsModel){
-        list.add(model)
-        notifyDataSetChanged()
-    }
 
-    interface Listener{
-        fun onClick(pos:Int)
+    interface Result {
+        fun onClickListener(id: String)
     }
 
 }

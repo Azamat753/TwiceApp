@@ -1,44 +1,43 @@
 package com.siroca.twiceapp.ui.fragment.ribbon.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import  android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.siroca.twiceapp.R
+import coil.load
 import com.siroca.twiceapp.databinding.ItemRbBinding
-import com.siroca.twiceapp.ui.fragment.ribbon.model.RibbonModel
+import com.example.domain.ribbon.entity.RibbonEntity
 
 class RibbonAdapter : RecyclerView.Adapter<RibbonAdapter.ViewHolder>() {
 
-    private val list = ArrayList<RibbonModel>()
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val binding = ItemRbBinding.bind(view)
-                fun bind(list: RibbonModel) = with(binding){
-                    rvTwiceImage.setImageResource(list.image)
-                    rvTwiceName.text = list.name
-                    rvTwiceDesc.text = list.description
-                }
-
-    }
+    var list = listOf<RibbonEntity>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_rb, parent, false)
-        return ViewHolder(view)
+        return ViewHolder(
+            ItemRbBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
+        holder.onBind(position)
     }
 
-    override fun getItemCount(): Int {
-        return list.size
+    override fun getItemCount(): Int = list.size
+
+    inner class ViewHolder(private val binding: ItemRbBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun onBind(position: Int) = with(binding) {
+            rvTwiceImage.load(list[position].image)
+            rvTwiceName.text = list[position].name
+            rvTwiceDesc.text = list[position].description
+        }
+
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun addRibbon(model: RibbonModel){
-        list.add(model)
-        notifyDataSetChanged()
-    }
 }

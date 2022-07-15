@@ -14,12 +14,20 @@
         android:id="@+id/participantsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.participants.ParticipantsFragment"
         android:label="@string/participants"
-        tools:layout="@layout/fragment_participants" />
+        tools:layout="@layout/fragment_participants" >
+        <action
+            android:id="@+id/action_participantsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.details.DetailsFragment"
         android:label="@string/details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/factsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.facts.FactsFragment"
