@@ -8,7 +8,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         tools:listitem="@layout/item_rb"
-        android:id="@+id/rv_item"
+        android:id="@+id/rv_rb"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

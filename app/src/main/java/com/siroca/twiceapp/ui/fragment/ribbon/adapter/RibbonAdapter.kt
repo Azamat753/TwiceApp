@@ -33,9 +33,9 @@ class RibbonAdapter : RecyclerView.Adapter<RibbonAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: ItemRbBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(position: Int) = with(binding) {
-            rvTwiceImage.load(list[position].image)
-            rvTwiceName.text = list[position].name
-            rvTwiceDesc.text = list[position].description
+            itemTwiceImage.load(list[position].image)
+            itemTwiceName.text = list[position].name
+            itemTwiceDesc.text = list[position].description
         }
 
     }
