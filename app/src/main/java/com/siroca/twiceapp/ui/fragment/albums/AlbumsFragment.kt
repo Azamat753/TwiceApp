@@ -12,7 +12,7 @@ import com.siroca.twiceapp.ui.fragment.participants.adapter.ParticipantsAdapter
 
 class AlbumsFragment : BaseFragment<FragmentAlbumsBinding>(
     FragmentAlbumsBinding::inflate
-), ParticipantsAdapter.Result {
+), AlbumsAdapter.Result {
 
     private val adapter: AlbumsAdapter by lazy {
         AlbumsAdapter(this)
@@ -48,7 +48,7 @@ class AlbumsFragment : BaseFragment<FragmentAlbumsBinding>(
     }
 
     private fun navigateAlbums(id: String) {
-        val action = ParticipantsFragmentDirections.actionParticipantsFragmentToDetailsFragment(id)
+        val action = AlbumsFragmentDirections.actionAlbumsFragmentToBuyFragment(id)
         findNavController().navigate(action)
     }
 }

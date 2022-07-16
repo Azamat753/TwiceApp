@@ -42,7 +42,11 @@
         android:id="@+id/albumsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.albums.AlbumsFragment"
         android:label="@string/albums"
-        tools:layout="@layout/fragment_albums" />
+        tools:layout="@layout/fragment_albums" >
+        <action
+            android:id="@+id/action_albumsFragment_to_buyFragment"
+            app:destination="@id/buyFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/checkoutFragment"
         android:name="com.siroca.twiceapp.ui.fragment.checkout.CheckoutFragment"
@@ -52,7 +56,11 @@
         android:id="@+id/buyFragment"
         android:name="com.siroca.twiceapp.ui.fragment.buy.BuyFragment"
         android:label="@string/checkout"
-        tools:layout="@layout/fragment_buy" />
+        tools:layout="@layout/fragment_buy">
+    <argument
+        android:name="id"
+        app:argType="string" />
+</fragment>
     <fragment
         android:id="@+id/toursFragment"
         android:name="com.siroca.twiceapp.ui.fragment.tours.ToursFragment"
