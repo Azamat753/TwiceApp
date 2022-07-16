@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.domain.albums.entity.AlbumsEntity
 import com.example.domain.participants.entity.ParticipantEntity
 import com.siroca.twiceapp.databinding.ItemAlbumsBinding
 import com.siroca.twiceapp.databinding.ItemParticipantsBinding
@@ -12,7 +13,7 @@ import com.siroca.twiceapp.ui.fragment.albums.AlbumsFragment
 class AlbumsAdapter(private val listener: AlbumsFragment):
     RecyclerView.Adapter<AlbumsAdapter.ViewHolder>(){
 
-    var list = listOf<ParticipantEntity>()
+    var list = listOf<AlbumsEntity>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -21,8 +22,8 @@ class AlbumsAdapter(private val listener: AlbumsFragment):
     inner class ViewHolder(private val binding: ItemAlbumsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(position: Int) = with(binding) {
-            itemAlbumImg.load(list[position].image)
-            itemAlbumName.text = list[position].name
+            itemAlbumImg.load(list[position].Image)
+            itemAlbumName.text = list[position].Name
         }
 
         fun onClick(position: Int) {

@@ -3,6 +3,7 @@ package com.siroca.twiceapp.ui.fragment.albums
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseFragment
+import com.example.domain.albums.entity.AlbumsEntity
 import com.example.domain.participants.entity.ParticipantEntity
 import com.siroca.twiceapp.databinding.FragmentAlbumsBinding
 import com.siroca.twiceapp.ui.fragment.albums.adapter.AlbumsAdapter
@@ -17,7 +18,7 @@ class AlbumsFragment : BaseFragment<FragmentAlbumsBinding>(
     private val adapter: AlbumsAdapter by lazy {
         AlbumsAdapter(this)
     }
-    private val viewModel by viewModels<ParticipantsViewModel>()
+    private val viewModel by viewModels<AlbumsViewModel>()
 
     override fun setupUI() {
         initAdapter()
@@ -32,7 +33,7 @@ class AlbumsFragment : BaseFragment<FragmentAlbumsBinding>(
     private fun observeParticipants() {
     }
 
-    private fun handleParticipants(list: List<ParticipantEntity>) {
+    private fun handleAlbums(list: List<AlbumsEntity>) {
         adapter.list = list
     }
 
