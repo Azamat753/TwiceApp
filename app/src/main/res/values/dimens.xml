@@ -26,4 +26,6 @@
     <dimen name="sixty_four">64dp</dimen>
     <dimen name="ten_sp">10sp</dimen>
     <dimen name="one_hundred">100dp</dimen>
+    <dimen name="eighty">80dp</dimen>
+    <dimen name="two_four_zero">240dp</dimen>
 </resources>

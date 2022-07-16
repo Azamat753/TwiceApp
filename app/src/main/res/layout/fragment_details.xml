@@ -62,6 +62,7 @@
         android:layout_height="wrap_content"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_facts"
         android:layout_marginTop="@dimen/sixteen"
         app:layout_constraintBottom_toTopOf="@id/btn_photos"
         android:backgroundTint="@color/orange"
@@ -229,6 +230,7 @@
                 android:layout_height="wrap_content"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_other_participants"
                 android:layout_marginTop="@dimen/twenty"
                 tools:listitem="@layout/item_participants"
                 android:orientation="horizontal"

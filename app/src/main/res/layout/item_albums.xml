@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_buy_album"
         app:cornerRadius="@dimen/eight"
         android:textColor="@color/white"
         android:paddingEnd="@dimen/twenty_four"

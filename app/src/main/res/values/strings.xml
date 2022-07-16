@@ -42,4 +42,5 @@
     <string name="mastercard">MasterCard</string>
     <string name="visa">VISA</string>
     <string name="_1">1. Выбрать способ оплаты</string>
+    <string name="all">Всего</string>
 </resources>

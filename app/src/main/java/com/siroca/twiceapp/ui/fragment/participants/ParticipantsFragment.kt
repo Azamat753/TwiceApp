@@ -58,7 +58,7 @@ class ParticipantsFragment :
      */
     override fun onClickListener(id: String) {
         navigateDetails(id)
-    }
+}
 
     /**
     Реализация перехода
