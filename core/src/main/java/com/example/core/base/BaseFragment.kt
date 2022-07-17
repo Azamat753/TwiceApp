@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
@@ -14,9 +16,11 @@ abstract class BaseFragment<VB : ViewBinding>(
     ) {
     private var binding: VB? = null
 
+
     protected fun requireBinding(): VB {
         return checkNotNull(binding)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -42,4 +46,18 @@ abstract class BaseFragment<VB : ViewBinding>(
     abstract fun setupUI()
 
     protected open fun setupObservers() {}
+
+    fun <T : Any, N : Any> renderResult(
+        root: ViewGroup, result: BaseResult<T, N>,
+        onPending: () -> Unit,
+        onError: (N?) -> Unit,
+        onSuccess: (T) -> Unit
+    ) {
+        root.children.forEach { it.isVisible = false }
+        when (result) {
+            is PendingResult -> onPending()
+            is SuccessResult -> onSuccess(result.data)
+            is ErrorResult -> onError(result.errorMsg)
+        }
+    }
 }

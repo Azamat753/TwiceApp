@@ -59,6 +59,11 @@ dependencies {
     implementation(Dependencies.Lifecycle.lifecycleViewModel)
     implementation(Dependencies.Lifecycle.lifecycleFragment)
 
+    //Firebase
+    implementation(platform(Dependencies.FireBase.fireBoM))
+    implementation(Dependencies.FireBase.fireAnalytics)
+    implementation(Dependencies.FireBase.fireStore)
+
     implementation(project(":domain"))
     implementation(project(":core"))
 }

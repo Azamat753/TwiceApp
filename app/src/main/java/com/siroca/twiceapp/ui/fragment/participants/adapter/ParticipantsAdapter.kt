@@ -7,8 +7,11 @@ import coil.load
 import com.siroca.twiceapp.databinding.ItemParticipantsBinding
 import com.example.domain.participants.entity.ParticipantEntity
 
-class ParticipantsAdapter(private val listener: Result) :
-    RecyclerView.Adapter<ParticipantsAdapter.ViewHolder>() {
+class ParticipantsAdapter(
+    private val listener: Result,
+    private val isOpenParticipants: Boolean
+) :
+    RecyclerView.Adapter<ParticipantsAdapter.ParticipantsViewHolder>() {
 
     var list = listOf<ParticipantEntity>()
         set(value) {
@@ -17,7 +20,7 @@ class ParticipantsAdapter(private val listener: Result) :
         }
 
 
-    inner class ViewHolder(private val binding: ItemParticipantsBinding) :
+    inner class ParticipantsViewHolder(private val binding: ItemParticipantsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(position: Int) = with(binding) {
             imgPart.load(list[position].image)
@@ -30,10 +33,16 @@ class ParticipantsAdapter(private val listener: Result) :
                 listener.onClickListener(list[position].id)
             }
         }
+
+        fun initHolder() {
+            if (!isOpenParticipants) {
+                itemView.setPadding(0, 0, 0, 0)
+            }
+        }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParticipantsViewHolder {
+        return ParticipantsViewHolder(
             ItemParticipantsBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent, false
@@ -41,7 +50,8 @@ class ParticipantsAdapter(private val listener: Result) :
         )
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ParticipantsViewHolder, position: Int) {
+        holder.initHolder()
         holder.onBind(position)
         holder.onClick(position)
     }

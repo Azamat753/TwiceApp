@@ -2,9 +2,6 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
-        maven {
-            setUrl("https://jitpack.io")
-        }
         mavenCentral()
     }
     resolutionStrategy {
@@ -20,6 +17,9 @@ pluginManagement {
             }
             if (requested.id.id.startsWith("androidx.navigation")) {
                 useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2")
+            }
+            if (requested.id.id.startsWith("com.google.gms")){
+                useModule("com.google.gms:google-services:4.3.12")
             }
         }
     }

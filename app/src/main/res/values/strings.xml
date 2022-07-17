@@ -48,4 +48,6 @@
     <string name="characteristic">Характеристика</string>
     <string name="height">Рост</string>
     <string name="weight">Вес</string>
+    <string name="can_not_load_data">Упс, не удалось загрузить данные</string>
+    <string name="try_again">Попробовать еще раз</string>
 </resources>

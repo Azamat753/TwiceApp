@@ -1,89 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:overScrollMode="never"
     tools:context=".ui.fragment.details.DetailsFragment">
 
-
-    <TextView
-        android:id="@+id/txt_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/sixteen"
-        android:layout_marginTop="@dimen/twelve"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sixteen_sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="nick" />
-
-    <ImageView
-        android:id="@+id/img_main_pic"
-        android:layout_width="@dimen/one_six_zero"
-        android:layout_height="@dimen/two_two_zero"
-        android:layout_marginTop="@dimen/sixteen"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@id/txt_name"
-        app:layout_constraintTop_toBottomOf="@id/txt_name"
-        />
-
-    <ImageView
-        android:id="@+id/img_first_pic"
-        android:layout_width="@dimen/eighty"
-        android:layout_height="@dimen/eighty"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@id/img_second_pic"
-        app:layout_constraintStart_toEndOf="@id/img_main_pic"
-        app:layout_constraintTop_toTopOf="@id/img_main_pic" />
-
-
-    <ImageView
-        android:id="@+id/img_second_pic"
-        android:layout_width="@dimen/eighty"
-        android:layout_height="@dimen/eighty"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/img_first_pic"
-        app:layout_constraintTop_toTopOf="@id/img_main_pic" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_photos"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
-        android:text="@string/photos"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@id/img_main_pic"
-        app:layout_constraintEnd_toEndOf="@id/img_second_pic"
-        app:layout_constraintStart_toStartOf="@id/img_first_pic" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_facts"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sixteen"
-        android:backgroundTint="@color/orange"
-        android:text="@string/fact"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@id/btn_photos"
-        app:layout_constraintEnd_toEndOf="@id/btn_photos"
-        app:layout_constraintStart_toStartOf="@id/btn_photos" />
-
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/zero"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_main_pic">
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txt_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sixteen"
+            android:layout_marginTop="@dimen/twelve"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen_sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="nick" />
+
+        <ImageView
+            android:id="@+id/img_main_pic"
+            android:layout_width="@dimen/one_six_zero"
+            android:layout_height="@dimen/two_two_zero"
+            android:layout_marginTop="@dimen/sixteen"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="@id/txt_nick"
+            app:layout_constraintTop_toBottomOf="@id/txt_nick" />
+
+        <ImageView
+            android:id="@+id/img_first_pic"
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/eighty"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/img_second_pic"
+            app:layout_constraintStart_toEndOf="@id/img_main_pic"
+            app:layout_constraintTop_toTopOf="@id/img_main_pic" />
+
+
+        <ImageView
+            android:id="@+id/img_second_pic"
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/eighty"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_first_pic"
+            app:layout_constraintTop_toTopOf="@id/img_main_pic" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_photos"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="@string/photos"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/img_main_pic"
+            app:layout_constraintEnd_toEndOf="@id/img_second_pic"
+            app:layout_constraintStart_toStartOf="@id/img_first_pic" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_facts"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sixteen"
+            android:backgroundTint="@color/orange"
+            android:text="@string/fact"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@id/btn_photos"
+            app:layout_constraintEnd_toEndOf="@id/btn_photos"
+            app:layout_constraintStart_toStartOf="@id/btn_photos" />
+
 
         <LinearLayout
             android:id="@+id/ln_scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingStart="@dimen/twelve">
+            android:paddingStart="@dimen/twelve"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_main_pic">
 
             <TextView
                 android:id="@+id/txt_real_names"
@@ -111,7 +112,7 @@
                 tools:text="name" />
 
             <TextView
-                android:id="@+id/txt_other_name"
+                android:id="@+id/txt_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/four"
@@ -121,17 +122,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txt_other_name_first"
+                android:id="@+id/txt_other_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/four"
-                android:textSize="@dimen/sixteen_sp"
-                tools:text="name" />
-
-            <TextView
-                android:id="@+id/txt_other_name_second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:textSize="@dimen/sixteen_sp"
                 tools:text="name" />
 
@@ -192,9 +186,9 @@
                 android:id="@+id/txt_car_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/four"
                 android:text="@string/career"
                 android:textColor="@color/black"
-                android:layout_marginVertical="@dimen/four"
                 android:textSize="@dimen/sixteen_sp"
                 android:textStyle="bold" />
 
@@ -210,8 +204,8 @@
                 android:id="@+id/txt_character_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/characteristic"
                 android:layout_marginVertical="@dimen/four"
+                android:text="@string/characteristic"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sixteen_sp"
                 android:textStyle="bold" />
@@ -221,8 +215,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/four"
-                android:textSize="@dimen/sixteen_sp"
-                android:text="@string/height" />
+                android:text="@string/height"
+                android:textSize="@dimen/sixteen_sp" />
 
             <TextView
                 android:id="@+id/txt_height"
@@ -236,8 +230,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/four"
-                android:textSize="@dimen/sixteen_sp"
-                android:text="@string/weight" />
+                android:text="@string/weight"
+                android:textSize="@dimen/sixteen_sp" />
 
             <TextView
                 android:id="@+id/txt_weight"
@@ -265,6 +259,5 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_participants" />
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

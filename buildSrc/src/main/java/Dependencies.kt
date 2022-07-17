@@ -48,6 +48,9 @@ object Dependencies {
     }
 
     object FireBase {
+        const val fireBoM = "com.google.firebase:firebase-bom:30.2.0"
+        const val fireAnalytics = "com.google.firebase:firebase-analytics"
+        const val fireStore = "com.google.firebase:firebase-firestore-ktx"
 
     }
 
