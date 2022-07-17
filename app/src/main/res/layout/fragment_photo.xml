@@ -7,12 +7,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.photo.PhotoFragment">
 
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Чжоу Цзоу"
+        android:textColor="@color/black"
+        android:textSize="@dimen/twenty"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginStart="@dimen/twelve"
+        android:textStyle="bold"/>
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/photo_vp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_name"
         app:layout_constraintBottom_toBottomOf="parent"
         >
     </androidx.viewpager2.widget.ViewPager2>
