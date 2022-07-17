@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_another_pcn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imgfact"/>
+
+    <ImageView
+        android:id="@+id/img_rectangle"
+        android:layout_height="match_parent"
+        android:layout_width="@dimen/one_hundred"
+        android:src="@drawable/rect"
+        app:layout_constraintBottom_toBottomOf="@id/img_another_pcn"
+        app:layout_constraintStart_toStartOf="@id/img_another_pcn"
+        app:layout_constraintEnd_toEndOf="@id/img_another_pcn"
+        android:alpha="0.84"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/img_another_pcn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/sixteen"/>
+
+    <Button
+        android:layout_width="@dimen/one_hundred"
+        android:layout_height="@dimen/twenty_four"
+        android:layout_marginVertical="@dimen/twelve"
+        android:text="Подробнее"
+        android:textSize="@dimen/twelve"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/finland"
+        android:background="@drawable/oval"
+        app:layout_constraintTop_toBottomOf="@id/img_another_pcn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

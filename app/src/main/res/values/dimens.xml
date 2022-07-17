@@ -8,6 +8,11 @@
     <dimen name="four">4dp</dimen>
     <dimen name="fifty">54dp</dimen>
     <dimen name="four_ty">46dp</dimen>
-    <dimen name="one_hundred">132dp</dimen>
     <dimen name="ninety">96dp</dimen>
+    <dimen name="t_hundred">326dp</dimen>
+    <dimen name="one_hundred">100dp</dimen>
+    <dimen name="twenty_four">24dp</dimen>
+    <dimen name="two_hundred">214dp</dimen>
+    <dimen name="etg">8dp</dimen>
+    <dimen name="third_etg">38dp</dimen>
 </resources>

@@ -1,14 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.facts.FactsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txt_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/zero"
+        android:text="@string/text"
+        android:textStyle="bold"
+        android:textColor="#222"
+        android:textSize="@dimen/twenty"
+        android:fontFamily="@font/finland"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/twenty"
+        android:paddingTop="@dimen/twelve"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/img_main"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero"
+        android:src="@drawable/imgffff"
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/twelve"
+        android:paddingTop="@dimen/twelve"/>
+
+    <ImageView
+        android:id="@+id/img_second"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero"
+        android:src="@drawable/imgfact"
+        app:layout_constraintStart_toEndOf="@id/img_main"
+        app:layout_constraintTop_toTopOf="@id/img_main"
+        android:paddingTop="@dimen/twelve"
+        android:paddingStart="@dimen/twelve"/>
+
+    <ImageView
+        android:id="@+id/img_third"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero"
+        android:src="@drawable/imgfact"
+        app:layout_constraintStart_toEndOf="@id/img_second"
+        app:layout_constraintTop_toTopOf="@id/img_second"
+        android:paddingTop="@dimen/twelve"
+        android:paddingStart="@dimen/twelve"/>
+
+    <Button
+        android:id="@+id/btn_details"
+        android:layout_width="@dimen/two_hundred"
+        android:layout_height="@dimen/third_etg"
+        android:background="@drawable/oval"
+        android:text="@string/detail"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:fontFamily="@font/finland"
+        app:layout_constraintTop_toBottomOf="@id/img_second"
+        app:layout_constraintStart_toEndOf="@id/img_main"
+        android:layout_marginVertical="@dimen/etg"
+        android:layout_marginStart="@dimen/twelve"/>
+
+    <Button
+        android:id="@+id/btn_photo"
+        android:layout_width="@dimen/two_hundred"
+        android:layout_height="@dimen/third_etg"
+        android:background="@drawable/oval"
+        android:text="@string/photo_txt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:fontFamily="@font/finland"
+        app:layout_constraintTop_toBottomOf="@id/btn_details"
+        app:layout_constraintStart_toEndOf="@id/img_main"
+        android:layout_marginTop="@dimen/etg"
+        android:layout_marginStart="@dimen/twelve"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nst_scr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/img_main"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csr_l"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            >
+
+            <TextView
+                android:id="@+id/txt_jype"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_marginStart="@dimen/twelve"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="@dimen/twelve"
+                android:text="@string/jype_15_2012"
+                android:textColor="#222"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero"
+            app:layout_constraintTop_toBottomOf="@id/txt_jype"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/nick"
+            android:textColor="#222"
+            android:textSize="@dimen/sixteen"
+            android:textStyle="bold"
+            android:fontFamily="@font/finland"
+            android:layout_marginTop="@dimen/four"
+            android:layout_marginStart="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/txt_nick_name_left"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero"
+                android:text="@string/text"
+                android:textSize="@dimen/sixteen"
+                android:textColor="#222"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:layout_marginStart="@dimen/four"
+                app:layout_constraintStart_toEndOf="@id/txt_nick_name"
+                app:layout_constraintTop_toTopOf="@id/txt_nick_name"
+                app:layout_constraintBottom_toBottomOf="@id/txt_nick_name"/>
+
+            <TextView
+                android:id="@+id/txt_favorite_color"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero"
+                android:fontFamily="@font/finland"
+                app:layout_constraintTop_toBottomOf="@id/txt_nick_name"
+                app:layout_constraintStart_toStartOf="@id/txt_nick_name"
+                android:text="@string/favorite_color"
+                android:textColor="#222"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/twelve" />
+
+            <TextView
+                android:id="@+id/txt_favorite_color_left"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero"
+                android:text="@string/text"
+                android:textSize="@dimen/sixteen"
+                android:textColor="#222"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:layout_marginStart="@dimen/four"
+                app:layout_constraintStart_toEndOf="@id/txt_favorite_color"
+                app:layout_constraintTop_toTopOf="@id/txt_favorite_color"
+                app:layout_constraintBottom_toBottomOf="@id/txt_favorite_color"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/txt_favorite_color_left">
+
+
+            <TextView
+                android:id="@+id/txt_high"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/twelve"
+                android:text="@string/high"
+                android:textStyle="bold"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:fontFamily="@font/finland"
+                android:layout_marginTop="@dimen/etg"/>
+
+            <TextView
+                android:id="@+id/txt_leave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:fontFamily="@font/finland"
+                android:layout_marginTop="@dimen/etg"/>
+
+            <TextView
+                android:id="@+id/txt_she_hush"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+
+            <TextView
+                android:id="@+id/txt_like"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_tell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_advice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_time_year"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_prof"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+            <TextView
+                android:id="@+id/txt_next_leave"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/high"
+                android:layout_marginStart="@dimen/twelve"
+                android:textStyle="bold"
+                android:fontFamily="@font/finland"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/etg"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txt_another_participants"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintTop_toBottomOf="@id/nst_scr"
+        app:layout_constraintStart_toStartOf="@id/nst_scr"
+        android:paddingStart="@dimen/twelve"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/twenty"
+        android:paddingTop="@dimen/sixteen"
+        android:text="@string/another"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintTop_toBottomOf="@id/txt_another_participants"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:paddingTop="@dimen/twelve"
+        tools:listitem="@layout/item_for_photo_rv"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
