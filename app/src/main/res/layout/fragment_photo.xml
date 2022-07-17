@@ -18,14 +18,15 @@
         android:layout_marginTop="@dimen/twenty"
         android:layout_marginStart="@dimen/twelve"
         android:textStyle="bold"/>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/photo_vp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/t_hundred"
+        app:layout_constraintBottom_toTopOf="@id/tab_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txt_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_name">
     </androidx.viewpager2.widget.ViewPager2>
 
     <TableLayout
