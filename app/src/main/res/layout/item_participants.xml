@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/one_hundred"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/sixteen">
+    android:layout_margin="16dp"
+    >
 
     <ImageView
         android:id="@+id/img_part"
-        android:layout_width="@dimen/one_hundred"
+        android:layout_width="@dimen/zero"
         android:layout_height="@dimen/one_hundred_twenty"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/participants" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,25 +40,26 @@
 
         <TextView
             android:id="@+id/txt_name"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="@dimen/sixteen_sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/txt_job"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/txt_job"
             tools:text="name" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_info"
-        android:layout_width="100dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="@dimen/forty"
         android:layout_marginTop="@dimen/eight"
         android:backgroundTint="@color/orange"
         android:text="@string/more"
         android:textSize="@dimen/ten_sp"
+        android:textAllCaps="false"
         app:cornerRadius="@dimen/eight"
         app:layout_constraintEnd_toEndOf="@id/img_part"
         app:layout_constraintStart_toStartOf="@id/img_part"

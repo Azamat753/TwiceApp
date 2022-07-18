@@ -12,7 +12,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/twicealbum1"
         android:layout_width="@dimen/one_hundred_twenty"
         android:layout_height="@dimen/one_hundred_twenty"/>
 
@@ -35,7 +34,7 @@
         app:cornerRadius="@dimen/eight"
         android:textColor="@color/white"
         android:paddingEnd="@dimen/twenty_four"
-        android:drawableEnd="@drawable/vector"
+        android:drawableEnd="@drawable/ic_shopping_cart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAllCaps="false"

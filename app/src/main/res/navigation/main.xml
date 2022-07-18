@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/ribbonFragment">
+    app:startDestination="@id/newsFragment">
 
     <fragment
-        android:id="@+id/ribbonFragment"
-        android:name="com.siroca.twiceapp.ui.fragment.ribbon.RibbonFragment"
+        android:id="@+id/newsFragment"
+        android:name="com.siroca.twiceapp.ui.fragment.ribbon.NewsFragment"
         android:label="@string/ribbon"
-        tools:layout="@layout/fragment_ribbon" />
+        tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/participantsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.participants.ParticipantsFragment"
         android:label="@string/participants"
-        tools:layout="@layout/fragment_participants" >
+        tools:layout="@layout/fragment_participants">
         <action
             android:id="@+id/action_participantsFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -23,21 +23,35 @@
         android:id="@+id/detailsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.details.DetailsFragment"
         android:label="@string/details"
-        tools:layout="@layout/fragment_details" >
+        tools:layout="@layout/fragment_details">
         <argument
             android:name="id"
             app:argType="string" />
+        <action
+            android:id="@+id/action_detailsFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_factsFragment"
+            app:destination="@id/factsFragment" />
     </fragment>
     <fragment
         android:id="@+id/factsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.facts.FactsFragment"
         android:label="@string/facts"
-        tools:layout="@layout/fragment_facts" />
+        tools:layout="@layout/fragment_facts" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/photoFragment"
         android:name="com.siroca.twiceapp.ui.fragment.photo.PhotoFragment"
         android:label="@string/photo"
-        tools:layout="@layout/fragment_photo" />
+        tools:layout="@layout/fragment_photo" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/albumsFragment"
         android:name="com.siroca.twiceapp.ui.fragment.albums.AlbumsFragment"

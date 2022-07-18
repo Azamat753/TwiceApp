@@ -1,153 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.checkout.CheckoutFragment">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/txt_choose"
-        android:layout_marginStart="@dimen/eight"
-        android:layout_marginTop="@dimen/twenty"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_choose"
+            android:layout_marginStart="@dimen/eight"
+            android:layout_marginTop="@dimen/twenty"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RadioButton
-        android:id="@+id/btn_visa"
-        android:paddingHorizontal="@dimen/sixteen"
-        android:textStyle="bold"
-        android:textSize="@dimen/fourteen_sp"
-        android:text="@string/visa"
-        android:layout_marginTop="@dimen/twenty_four"
-        app:layout_constraintTop_toBottomOf="@id/txt_choose"
-        app:layout_constraintStart_toStartOf="@id/txt_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btn_visa"
+            android:paddingHorizontal="@dimen/sixteen"
+            android:textStyle="bold"
+            android:textSize="@dimen/fourteen_sp"
+            android:text="@string/visa"
+            android:layout_marginTop="@dimen/twenty_four"
+            app:layout_constraintTop_toBottomOf="@id/txt_choose"
+            app:layout_constraintStart_toStartOf="@id/txt_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RadioButton
-        android:id="@+id/btn_mastercard"
-        android:layout_marginTop="@dimen/twenty"
-        android:textSize="@dimen/fourteen_sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:paddingHorizontal="@dimen/sixteen"
-        android:text="@string/mastercard"
-        app:layout_constraintTop_toBottomOf="@id/btn_visa"
-        app:layout_constraintStart_toStartOf="@id/btn_visa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btn_mastercard"
+            android:layout_marginTop="@dimen/twenty"
+            android:textSize="@dimen/fourteen_sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingHorizontal="@dimen/sixteen"
+            android:text="@string/mastercard"
+            app:layout_constraintTop_toBottomOf="@id/btn_visa"
+            app:layout_constraintStart_toStartOf="@id/btn_visa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RadioButton
-        android:id="@+id/btn_cash"
-        android:textSize="@dimen/fourteen_sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:paddingHorizontal="@dimen/sixteen"
-        android:text="@string/nal"
-        android:layout_marginTop="@dimen/twenty"
-        app:layout_constraintTop_toBottomOf="@id/btn_mastercard"
-        app:layout_constraintStart_toStartOf="@id/btn_mastercard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btn_cash"
+            android:textSize="@dimen/fourteen_sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/sixteen"
+            android:text="@string/nal"
+            android:layout_marginTop="@dimen/twenty"
+            app:layout_constraintTop_toBottomOf="@id/btn_mastercard"
+            app:layout_constraintStart_toStartOf="@id/btn_mastercard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RadioButton
-        android:id="@+id/btn_elsom"
-        android:paddingHorizontal="@dimen/sixteen"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="@dimen/fourteen_sp"
-        android:text="@string/elsom"
-        android:layout_marginStart="@dimen/one_hundred_forty"
-        android:layout_marginTop="@dimen/twenty_eight"
-        app:layout_constraintTop_toBottomOf="@id/txt_choose"
-        app:layout_constraintStart_toEndOf="@id/btn_visa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btn_elsom"
+            android:paddingHorizontal="@dimen/sixteen"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/fourteen_sp"
+            android:text="@string/elsom"
+            android:layout_marginStart="@dimen/one_hundred_forty"
+            android:layout_marginTop="@dimen/twenty_eight"
+            app:layout_constraintTop_toBottomOf="@id/txt_choose"
+            app:layout_constraintStart_toEndOf="@id/btn_visa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RadioButton
-        android:id="@+id/btn_omoney"
-        android:paddingHorizontal="@dimen/sixteen"
-        android:textSize="@dimen/fourteen_sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="@dimen/sixteen_sp"
-        app:layout_constraintStart_toStartOf="@id/btn_elsom"
-        app:layout_constraintTop_toBottomOf="@id/btn_elsom"
-        android:text="@string/O"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btn_omoney"
+            android:paddingHorizontal="@dimen/sixteen"
+            android:textSize="@dimen/fourteen_sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/sixteen_sp"
+            app:layout_constraintStart_toStartOf="@id/btn_elsom"
+            app:layout_constraintTop_toBottomOf="@id/btn_elsom"
+            android:text="@string/O"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/txt_address_and_cell"
-        android:textSize="@dimen/sixteen_sp"
-        android:layout_marginTop="@dimen/sixty_four"
-        app:layout_constraintTop_toBottomOf="@id/btn_cash"
-        app:layout_constraintStart_toStartOf="@id/txt_choose"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="@string/_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_address_and_cell"
+            android:textSize="@dimen/sixteen_sp"
+            android:layout_marginTop="@dimen/sixty_four"
+            app:layout_constraintTop_toBottomOf="@id/btn_cash"
+            app:layout_constraintStart_toStartOf="@id/txt_choose"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/town_or_pun"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/twenty"
-        app:layout_constraintTop_toBottomOf="@id/txt_address_and_cell"
-        app:layout_constraintStart_toStartOf="@id/txt_address_and_cell"
-        android:text="@string/town"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/town_or_pun"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/twenty"
+            app:layout_constraintTop_toBottomOf="@id/txt_address_and_cell"
+            app:layout_constraintStart_toStartOf="@id/txt_address_and_cell"
+            android:text="@string/town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <EditText
-        android:textSize="@dimen/fourteen_sp"
-        android:id="@+id/ed_town"
-        android:textColor="@color/black"
-        android:paddingStart="@dimen/four"
-        android:layout_marginTop="@dimen/sixteen"
-        android:background="@drawable/input_types"
-        android:hint="@string/town_bish"
-        app:layout_constraintTop_toBottomOf="@id/town_or_pun"
-        app:layout_constraintEnd_toEndOf="@id/town_or_pun"
-        app:layout_constraintStart_toStartOf="@id/town_or_pun"
-        android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/forty"/>
+        <EditText
+            android:textSize="@dimen/fourteen_sp"
+            android:id="@+id/ed_town"
+            android:textColor="@color/black"
+            android:paddingStart="@dimen/four"
+            android:layout_marginTop="@dimen/sixteen"
+            android:background="@drawable/bg_types"
+            android:hint="@string/town_bish"
+            app:layout_constraintTop_toBottomOf="@id/town_or_pun"
+            app:layout_constraintEnd_toEndOf="@id/town_or_pun"
+            app:layout_constraintStart_toStartOf="@id/town_or_pun"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/forty"/>
 
-    <TextView
-        android:id="@+id/txt_street_number_house_apartment"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/twenty_four"
-        app:layout_constraintTop_toBottomOf="@id/ed_town"
-        app:layout_constraintStart_toStartOf="@id/town_or_pun"
-        android:text="@string/street"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_street_number_house_apartment"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/twenty_four"
+            app:layout_constraintTop_toBottomOf="@id/ed_town"
+            app:layout_constraintStart_toStartOf="@id/town_or_pun"
+            android:text="@string/street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/ed_street"
-        android:paddingStart="@dimen/four"
-        android:textSize="@dimen/fourteen_sp"
-        android:textColor="@color/black"
-        android:background="@drawable/input_types"
-        android:layout_marginTop="@dimen/twenty"
-        app:layout_constraintEnd_toEndOf="@id/ed_town"
-        app:layout_constraintTop_toBottomOf="@id/txt_street_number_house_apartment"
-        app:layout_constraintStart_toStartOf="@id/txt_street_number_house_apartment"
-        android:hint="@string/_96_67"
-        android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/forty"/>
+        <EditText
+            android:id="@+id/ed_street"
+            android:paddingStart="@dimen/four"
+            android:textSize="@dimen/fourteen_sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_types"
+            android:layout_marginTop="@dimen/twenty"
+            app:layout_constraintEnd_toEndOf="@id/ed_town"
+            app:layout_constraintTop_toBottomOf="@id/txt_street_number_house_apartment"
+            app:layout_constraintStart_toStartOf="@id/txt_street_number_house_apartment"
+            android:hint="@string/_96_67"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/forty"/>
 
         <TextView
             android:id="@+id/txt_number_of_cell"
@@ -165,7 +162,7 @@
             android:id="@+id/ed_number"
             android:paddingStart="@dimen/four"
             android:hint="@string/_996_777_666_555"
-            android:background="@drawable/input_types"
+            android:background="@drawable/bg_types"
             android:layout_marginTop="@dimen/sixteen"
             app:layout_constraintTop_toBottomOf="@id/txt_number_of_cell"
             app:layout_constraintEnd_toEndOf="@id/ed_town"
@@ -199,7 +196,7 @@
         <EditText
             android:textColor="@color/black"
             android:textSize="@dimen/fourteen_sp"
-            android:background="@drawable/input_types"
+            android:background="@drawable/bg_types"
             android:id="@+id/ed_number_card"
             android:paddingStart="@dimen/four"
             android:layout_marginTop="@dimen/sixteen"
@@ -231,7 +228,7 @@
             app:layout_constraintStart_toStartOf="@id/txt_owner_card"
             android:hint="@string/ivanov_ivan"
             android:paddingHorizontal="@dimen/four"
-            android:background="@drawable/input_types"
+            android:background="@drawable/bg_types"
             android:layout_width="@dimen/zero"
             android:layout_height="@dimen/forty"/>
 
@@ -254,7 +251,7 @@
             app:layout_constraintTop_toBottomOf="@id/txt_valid_thru"
             app:layout_constraintEnd_toEndOf="@id/ed_town"
             app:layout_constraintStart_toStartOf="@id/ed_town"
-            android:background="@drawable/input_types"
+            android:background="@drawable/bg_types"
             android:paddingStart="@dimen/four"
             android:hint="@string/_11_23"
             android:layout_width="@dimen/zero"
@@ -274,7 +271,7 @@
         <EditText
             android:id="@+id/ed_cvc"
             android:paddingStart="@dimen/four"
-            android:background="@drawable/input_types"
+            android:background="@drawable/bg_types"
             android:layout_marginTop="@dimen/sixteen"
             app:layout_constraintTop_toBottomOf="@id/txt_cvc"
             app:layout_constraintEnd_toEndOf="@id/ed_town"
@@ -299,6 +296,7 @@
             android:text="@string/buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        
-     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

@@ -14,13 +14,12 @@ class ParticipantsFragment :
     ParticipantsAdapter.Result {
 
     private val adapter: ParticipantsAdapter by lazy {
-        ParticipantsAdapter(this)
+        ParticipantsAdapter(this, true)
     }
     private val viewModel by viewModels<ParticipantsViewModel>()
 
     override fun setupUI() {
         initAdapter()
-        initData()
     }
 
     override fun setupObservers() {
@@ -28,26 +27,13 @@ class ParticipantsFragment :
         observeParticipants()
     }
 
-    /**
-    Получения данных из ViewModel
-    p.s
-    схема написанная ниже работает так же только в обратную сторону
-     */
     private fun observeParticipants() {
-
     }
 
     private fun handleParticipants(list: List<ParticipantEntity>) {
         adapter.list = list
     }
 
-    /**
-    Запрос через ViewModel , viewModel в свою очередь дергает domain слой ,
-    domain cлой дергает data слой, и только через data слой осуществляется запрос на сервер
-     **/
-    private fun initData() {
-
-    }
 
     private fun initAdapter() {
         requireBinding().rvParticipants.adapter = adapter

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ribbonFragment"
+        android:id="@+id/newsFragment"
         android:icon="@drawable/ribbon_selector"
         android:title="@string/ribbon" />
     <item

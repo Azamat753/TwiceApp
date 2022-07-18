@@ -15,12 +15,13 @@ sealed class BaseResult<out T : Any, out N : Any> {
 
 object PendingResult : BaseResult<Nothing, Nothing>()
 
+
 data class SuccessResult<T : Any>(
     val data: T
 ) : BaseResult<T, Nothing>()
 
 data class ErrorResult<N : Any>(
-    val errorMsg: N
+    val errorMsg: N?
 ) : BaseResult<Nothing, N>()
 
 fun <T : Any, N : Any> BaseResult<T, N>?.takeSuccess(): T? {
