@@ -1,5 +1,6 @@
 package com.siroca.twiceapp.ui.fragment.participants.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -14,11 +15,11 @@ class ParticipantsAdapter(
     RecyclerView.Adapter<ParticipantsAdapter.ParticipantsViewHolder>() {
 
     var list = listOf<ParticipantEntity>()
+        @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()
         }
-
 
     inner class ParticipantsViewHolder(private val binding: ItemParticipantsBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -57,7 +58,6 @@ class ParticipantsAdapter(
     }
 
     override fun getItemCount(): Int = list.size
-
 
     interface Result {
         fun onClickListener(id: String)

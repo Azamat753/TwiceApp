@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
                 binding.bottomNav.gone()
             else
                 binding.bottomNav.visible()
-
         }
     }
 

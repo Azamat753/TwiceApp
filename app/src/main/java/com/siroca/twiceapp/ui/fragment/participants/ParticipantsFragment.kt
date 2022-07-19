@@ -7,7 +7,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.core.base.BaseFragment
 import com.example.core.base.BaseResult
-import com.example.domain.news.entity.NewsEntity
 import com.example.domain.participants.entity.ParticipantEntity
 import com.siroca.twiceapp.databinding.FragmentParticipantsBinding
 import com.siroca.twiceapp.ui.fragment.participants.adapter.ParticipantsAdapter
@@ -34,7 +33,7 @@ class ParticipantsFragment :
     }
 
     private fun initBtn() {
-        onTryAgainListener(requireView()) {
+        onTryAgainListener(requireView( )) {
             viewModel.tryAgain()
         }
     }

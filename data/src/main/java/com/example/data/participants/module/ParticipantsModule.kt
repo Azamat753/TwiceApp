@@ -11,7 +11,7 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface ParticipantsModule {
     @Binds
-    fun bindNewsRepo(
+    fun bindParticipantsRepo(
         participantsRepositoryImpl: ParticipantsRepositoryImpl
     ): ParticipantsRepository
 }

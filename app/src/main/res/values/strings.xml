@@ -42,4 +42,7 @@
     <string name="mastercard">MasterCard</string>
     <string name="visa">VISA</string>
     <string name="_1">1. Выбрать способ оплаты</string>
+    <string name="all">Всего</string>
+    <string name="can_not_load_data">Can not load data</string>
+    <string name="try_again">Try again</string>
 </resources>

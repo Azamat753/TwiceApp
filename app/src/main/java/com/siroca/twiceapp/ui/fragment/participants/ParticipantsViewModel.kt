@@ -18,30 +18,30 @@ import javax.inject.Inject
 class ParticipantsViewModel @Inject constructor(
     private val getParticipantsUseCase: GetParticipantsUseCase
 ) : BaseViewModel() {
-    private val _newsResult: MutableStateResult<List<ParticipantEntity>, String> =
+    private val _participantsResult: MutableStateResult<List<ParticipantEntity>, String> =
         MutableStateFlow(PendingResult)
-    val newsResult: StateResult<List<ParticipantEntity>, String> get() = _newsResult
+    val newsResult: StateResult<List<ParticipantEntity>, String> get() = _participantsResult
 
     init {
-        fetchNews()
+        fetchParticipants()
     }
 
-    private fun fetchNews() {
+    private fun fetchParticipants() {
         viewModelScope.launch(Dispatchers.IO) {
             getParticipantsUseCase.getNews()
                 .onStart {
-                    _newsResult.value = PendingResult
+                    _participantsResult.value = PendingResult
                 }
                 .catch {
-                    _newsResult.value = ErrorResult(it.message.toString())
+                    _participantsResult.value = ErrorResult(it.message.toString())
                 }
                 .collect {
-                    _newsResult.value = it
+                    _participantsResult.value = it
                 }
         }
     }
 
     fun tryAgain() {
-        fetchNews()
+        fetchParticipants()
     }
 }

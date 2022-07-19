@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/img_tours"
         android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/two_zero_zero"
+        android:layout_height="@dimen/two_hundred"
         android:layout_marginHorizontal="@dimen/twelve"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
