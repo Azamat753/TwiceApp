@@ -5,5 +5,5 @@ import com.example.domain.participants.entity.ParticipantEntity
 import kotlinx.coroutines.flow.Flow
 
 interface ParticipantsRepository {
-    suspend fun getNews(): Flow<BaseResult<List<ParticipantEntity>, String>>
+    suspend fun getParticipants(): Flow<BaseResult<List<ParticipantEntity>, String>>
 }

@@ -1,6 +1,5 @@
 package com.siroca.twiceapp.ui.fragment.participants.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +14,6 @@ class ParticipantsAdapter(
     RecyclerView.Adapter<ParticipantsAdapter.ParticipantsViewHolder>() {
 
     var list = listOf<ParticipantEntity>()
-        @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -26,11 +24,11 @@ class ParticipantsAdapter(
         fun onBind(position: Int) = with(binding) {
             imgPart.load(list[position].image)
             txtName.text = list[position].name
-            txtJob.text = list[position].position_group
+            txtJob.text = list[position].job
         }
 
         fun onClick(position: Int) {
-            itemView.setOnClickListener {
+            binding.btnToDetails.setOnClickListener {
                 listener.onClickListener(list[position].id)
             }
         }

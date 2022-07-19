@@ -17,7 +17,7 @@ class ParticipantsRepositoryImpl @Inject  constructor(
 ) : ParticipantsRepository {
 
     private val participantsDtoToEntity = ParticipantsDtoToEntity()
-    override suspend fun getNews(): Flow<BaseResult<List<ParticipantEntity>, String>> = callbackFlow {
+    override suspend fun getParticipants(): Flow<BaseResult<List<ParticipantEntity>, String>> = callbackFlow {
         db.collection(Collection.participants).get().addOnCompleteListener { task ->
             val list = mutableListOf<ParticipantsDto>()
             task.result.forEach {

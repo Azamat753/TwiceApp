@@ -2,14 +2,14 @@ package com.example.domain.participants.entity
 
 data class ParticipantEntity(
     val id: String,
+    val image: String,
     val name: String,
-    val position_group: String,
-    val image: String
+    val job: String
 ) {
     companion object {
-        fun onCreate(id: String, title: String, description: String, image: String)
+        fun onCreate(id: String, image: String, name: String, job: String)
                 : ParticipantEntity = ParticipantEntity(
-            id, title, description, image
+            id, image, name, job
         )
     }
 }

@@ -53,6 +53,7 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_to_details"
         android:layout_width="@dimen/zero"
         android:layout_height="@dimen/forty"
         android:layout_marginTop="@dimen/eight"

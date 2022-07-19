@@ -9,5 +9,5 @@ import javax.inject.Inject
 class GetParticipantsUseCase @Inject constructor(
     private val repository: ParticipantsRepository
 ) {
-    suspend fun getNews(): Flow<BaseResult<List<ParticipantEntity>, String>> = repository.getNews()
+    suspend fun getParticipants(): Flow<BaseResult<List<ParticipantEntity>, String>> = repository.getParticipants()
 }

@@ -20,7 +20,7 @@ class ParticipantsViewModel @Inject constructor(
 ) : BaseViewModel() {
     private val _participantsResult: MutableStateResult<List<ParticipantEntity>, String> =
         MutableStateFlow(PendingResult)
-    val newsResult: StateResult<List<ParticipantEntity>, String> get() = _participantsResult
+    val participantsResult: StateResult<List<ParticipantEntity>, String> get() = _participantsResult
 
     init {
         fetchParticipants()
@@ -28,7 +28,7 @@ class ParticipantsViewModel @Inject constructor(
 
     private fun fetchParticipants() {
         viewModelScope.launch(Dispatchers.IO) {
-            getParticipantsUseCase.getNews()
+            getParticipantsUseCase.getParticipants()
                 .onStart {
                     _participantsResult.value = PendingResult
                 }

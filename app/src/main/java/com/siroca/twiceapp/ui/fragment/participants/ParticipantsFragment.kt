@@ -33,7 +33,7 @@ class ParticipantsFragment :
     }
 
     private fun initBtn() {
-        onTryAgainListener(requireView( )) {
+        onTryAgainListener(requireView()) {
             viewModel.tryAgain()
         }
     }
@@ -44,7 +44,7 @@ class ParticipantsFragment :
     }
 
     private fun observeParticipants() {
-        viewModel.newsResult.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+        viewModel.participantsResult.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
             .onEach { handleParticipants(it) }.launchIn(lifecycleScope)
     }
 
@@ -52,7 +52,7 @@ class ParticipantsFragment :
         renderSimpleResult(requireBinding().root,
             result,
             onSuccess = { data ->
-                handleRibbon(data)
+                handleParticipants(data)
             },
             onError = { msg ->
                 handleError(msg)
@@ -63,7 +63,7 @@ class ParticipantsFragment :
         requireContext().showToast(msg)
     }
 
-    private fun handleRibbon(data: List<ParticipantEntity>) {
+    private fun handleParticipants(data: List<ParticipantEntity>) {
         adapter.list = data
     }
 
