@@ -1,4 +1,4 @@
-package com.siroca.twiceapp.ui.fragment.ribbon
+package com.siroca.twiceapp.ui.fragment.news
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -8,7 +8,7 @@ import com.example.core.base.BaseFragment
 import com.example.core.base.BaseResult
 import com.example.domain.news.entity.NewsEntity
 import com.siroca.twiceapp.databinding.FragmentNewsBinding
-import com.siroca.twiceapp.ui.fragment.ribbon.adapter.NewsAdapter
+import com.siroca.twiceapp.ui.fragment.news.adapter.NewsAdapter
 import com.siroca.twiceapp.utils.ext.onTryAgainListener
 import com.siroca.twiceapp.utils.ext.renderSimpleResult
 import com.siroca.twiceapp.utils.ext.showToast
