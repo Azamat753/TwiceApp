@@ -1,4 +1,4 @@
-package com.siroca.twiceapp.ui.fragment.ribbon
+package com.siroca.twiceapp.ui.fragment.news
 
 import androidx.lifecycle.viewModelScope
 import com.example.core.base.*

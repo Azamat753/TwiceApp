@@ -1,4 +1,4 @@
-package com.siroca.twiceapp.ui.fragment.ribbon.adapter
+package com.siroca.twiceapp.ui.fragment.news.adapter
 
 import android.view.LayoutInflater
 import  android.view.ViewGroup
