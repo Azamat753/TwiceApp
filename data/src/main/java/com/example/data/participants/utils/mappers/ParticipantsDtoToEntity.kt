@@ -6,6 +6,6 @@ import com.example.domain.participants.entity.ParticipantEntity
 
 class ParticipantsDtoToEntity : BaseMapper<ParticipantsDto, ParticipantEntity> {
     override fun invoke(p1: ParticipantsDto): ParticipantEntity = ParticipantEntity.onCreate(
-        p1.id, p1.image, p1.name, p1.job
+        p1.id, p1.image, p1.nick_name, p1.position
     )
 }

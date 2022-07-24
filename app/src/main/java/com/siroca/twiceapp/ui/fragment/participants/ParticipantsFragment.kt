@@ -52,7 +52,7 @@ class ParticipantsFragment :
         renderSimpleResult(requireBinding().root,
             result,
             onSuccess = { data ->
-                handleParticipants(data)
+                handleParticipantss(data)
             },
             onError = { msg ->
                 handleError(msg)
@@ -63,7 +63,7 @@ class ParticipantsFragment :
         requireContext().showToast(msg)
     }
 
-    private fun handleParticipants(data: List<ParticipantEntity>) {
+    private fun handleParticipantss(data: List<ParticipantEntity>) {
         adapter.list = data
     }
 
@@ -76,7 +76,7 @@ class ParticipantsFragment :
      */
     override fun onClickListener(id: String) {
         navigateDetails(id)
-}
+    }
 
     /**
     Реализация перехода

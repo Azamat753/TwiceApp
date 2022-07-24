@@ -23,8 +23,8 @@ class ParticipantsAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(position: Int) = with(binding) {
             imgPart.load(list[position].image)
-            txtName.text = list[position].name
-            txtJob.text = list[position].job
+            txtName.text = list[position].nick_name
+            txtJob.text = list[position].position
         }
 
         fun onClick(position: Int) {

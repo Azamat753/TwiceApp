@@ -3,7 +3,6 @@ package com.siroca.twiceapp.utils.ext
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.view.children
 import androidx.core.view.isVisible
@@ -56,5 +55,5 @@ fun <B : ViewBinding> BaseFragment<B>.onTryAgainListener(
     root: View,
     onTryAgainAction: () -> Unit,
 ) {
-    root.findViewById<Button>(R.id.btn_try_again).setOnClickListener { onTryAgainAction() }
+    root.findViewById<MaterialButton>(R.id.btn_try_again).setOnClickListener { onTryAgainAction() }
 }

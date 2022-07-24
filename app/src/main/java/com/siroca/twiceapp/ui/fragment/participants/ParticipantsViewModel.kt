@@ -2,8 +2,6 @@ package com.siroca.twiceapp.ui.fragment.participants
 
 import androidx.lifecycle.viewModelScope
 import com.example.core.base.*
-import com.example.domain.news.entity.NewsEntity
-import com.example.domain.news.use_case.GetNewsUseCase
 import com.example.domain.participants.entity.ParticipantEntity
 import com.example.domain.participants.use_case.GetParticipantsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

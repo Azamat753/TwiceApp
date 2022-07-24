@@ -3,13 +3,13 @@ package com.example.domain.participants.entity
 data class ParticipantEntity(
     val id: String,
     val image: String,
-    val name: String,
-    val job: String
+    val nick_name: String,
+    val position: String
 ) {
     companion object {
-        fun onCreate(id: String, image: String, name: String, job: String)
+        fun onCreate(id: String, image: String, nick_name: String, position: String)
                 : ParticipantEntity = ParticipantEntity(
-            id, image, name, job
+            id, image, nick_name, position
         )
     }
 }

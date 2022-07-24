@@ -229,6 +229,7 @@
                 android:layout_height="wrap_content"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_details"
                 android:layout_marginTop="@dimen/twenty"
                 tools:listitem="@layout/item_participants"
                 android:orientation="horizontal"
@@ -237,4 +238,6 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+    <include
+        layout="@layout/part_result"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
